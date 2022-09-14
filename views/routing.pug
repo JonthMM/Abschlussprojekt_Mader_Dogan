@@ -1,0 +1,14 @@
+extends layout
+block content
+  h1 Navigation 
+  p Auf dieser Seite ist es möglich entweder zu und von frei ausgewählten Punkten routen erstellt werden, es kann aber auch
+  p der eigene Standort und die hinzugefügten und in der Datenbank gespeicherten Gebirge genutzt werden
+  
+        br
+        button.btn.btn-success#userlocation Standortabfrage!
+        #map
+        script.
+          let geojson = !{JSON.stringify(data)}
+
+        block scripts 
+          script(src="/javascripts/wegbeschreibung.js")

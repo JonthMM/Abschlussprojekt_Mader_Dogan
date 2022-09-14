@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  h1 Gebirge löschen
+  p  Auf dieser Seite können die hinzugefügten Gebirge wieder gelöscht werden. Dazu ist es nur nötig auf der Karte auf die Gebirgemarker zu klicken! Diese erkennen Sie ganz leicht an den Bildern!
+  br
+  br
+  #map
+  br
+  .row.justify-content-md-center
+    .col-lg-6.col-xs-12.mb-3
+        .card.text-dark.p-4.border-success.card
+            form(action='/delete/deleteOne' method='post')
+              fieldset
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='id') ID
+                  .col-sm-7
+                    input#id.form-control(type='text' name="id" readonly)
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='mountain') Name          
+                  .col-sm-7
+                    input#mountain.form-control(type='text' name="mountain" placeholder="Name des Gebirge")
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='altitude') Höhe
+                  .col-sm-7
+                    input#altitude.form-control(type='text' name="altitude" placeholder="Höhe des Gebirge")
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='long') Längengrad
+                  .col-sm-7
+                    input#long.form-control(type='text' name="long" placeholder="X Koordinate des Gebirge")
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='lat') Breitengrad
+                  .col-sm-7
+                    input#lat.form-control(type='text' name="lat" placeholder="Y Koordinate des Gebirge")
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='url') Wikipedialink
+                  .col-sm-7
+                    input#url.form-control(type='text' name="url" placeholder="Link zum Wikipediaartikles für kurze Beschreibung")
+                    br
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='beschreibung') Beschreibung
+                  .col-sm-7
+                    input#beschreibung.form-control(type='text' name="beschreibung" readonly)
+                    br
+                button.btn.btn-success(type='submit' formaction="/delete/deleteOne") Löschen
+
+  script.
+    let geojson = !{JSON.stringify(data)}
+
+  block scripts 
+    script(src="/javascripts/loeschen.js")

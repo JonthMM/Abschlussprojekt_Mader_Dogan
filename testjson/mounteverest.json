@@ -1,0 +1,15 @@
+{
+    "type": "Feature",
+    "properties": {
+    "name": "Mount Everest",
+    "altitude": 8848,
+     "url": "https://de.wikipedia.org/wiki/Mount_Everest"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        86.92477226257324,
+        27.98758028091874
+      ]
+    }
+  }

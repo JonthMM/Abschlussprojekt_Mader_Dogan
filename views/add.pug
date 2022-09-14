@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  h1 Gebirge hinzufügen
+  p Auf dieser Seite ist es möglich Gebirge entweder durch leaflet draw, oder im GeoJSON Format als Datei oder Text zur Datenbank hinzugefügt werden, dies kann zusätzlich durch einen Wikipedia Link ergänzt werden um so eine Beschreibung des Gebirges zu bekommen.
+  br
+  br
+  h3 Marker auf Karte für Standort setzen:
+  #map
+  br
+  br
+  h3 Ergänzen des Namens, der Höhe und des Wikipedialinks:
+  .row.justify-content-md-center
+    .col-lg-6.col-xs-12.mb-3.justify-content-md-center 
+        .card.text-dark.p-4.border-success.card
+            form(action='/add/leafletmarker' method='post')
+                fieldset
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='mountain') Name          
+                    .col-sm-6
+                      input#name.form-control(type='text' name="mountain" placeholder="Name des Gebirge")
+                      br
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='altitude') Höhe
+                    .col-sm-6
+                      input#altitude.form-control(type='text' name="altitude" placeholder="Höhe des Gebirge")
+                      br
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='long') Längengrad
+                    .col-sm-6
+                      input#long.form-control(type='text' name="long" placeholder="X Koordinate des Gebirge")
+                      br
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='lat') Breitengrad
+                    .col-sm-6
+                      input#lat.form-control(type='text' name="lat" placeholder="Y Koordinate des Gebirge")
+                      br
+                  .form-group.row
+                    label.col-sm-2.col-form-label(for='url') Wikipedialink
+                    .col-sm-6
+                      input#url.form-control(type='text' name="url" placeholder="Link zum Wikipediaartikles für kurze Beschreibung")
+                      br
+                  button.btn.btn-success(type='submit') Speichern
+                
+    .col-lg-6.col-xs-12.mb-3.justify-content-md-center  
+        .card.text-dark.p-4.border-success.card
+          form(action='/add/textarea' method='post')
+            fieldset
+              .form-group.row 
+                div
+                  textarea.form-control(type='textarea' name="textarea" placeholder='Bitte nur Features im Folgenden Format:\n  {\n    "type": "Feature",\n    "properties": {\n      "name": "Name",\n      "altitude": Höhe,\n      "url": "https://de.wikipedia.org/...",\n      ("description": " ")\n},\n    "geometry": {\n      "type": "Point",\n      "coordinates": [long, lat]\n    }\n}')#textarea
+              button.btn.btn-success(type='submit') Speichern
+            h3 Upload einer .json oder .geojson Datei:
+              br
+              input#upload(type='file')
+              br  
+  
+  script(src="/javascripts/hinzufuegen.js")
