@@ -15,7 +15,7 @@ $ docker-compose up
 <br>
 (Etwas Geduld muss hier für den Download mitgebracht werden)
 <br>
-Die Webiste ist dann Erreichbar unter:<br>
+Die Website ist dann Erreichbar unter:<br>
 http://localhost:3000/
 <br>
 <br>
@@ -25,3 +25,7 @@ Klonen Sie das Repository und speichern es Lokal.<br>
 $ npm install <br>
 und dann <br>
 $ npm start <br>
+<br>
+Die Website ist dann erreichbar unter:<br>
+http://localhost:3000/
+<br>
