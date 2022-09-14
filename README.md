@@ -7,9 +7,8 @@ Dockerhub: https://hub.docker.com/repository/docker/jonthnm/projektaufgabe_mader
 
 <h2>Tutorial</h2>
 <br>
-Um die Anwendung mit Docker zu starten ziehen Sie sich das Image von Docker hub und lassen es laufen mit dem mongo und dem mongo-express Container
 <br>
-$ docker-compose up
+Um die Anwendung mit Docker zu starten ziehen Sie sich das Image von Docker hub und lassen es laufen <br> mit dem mongo und dem mongo-express Container
 <br>
 (Etwas Geduld muss hier für den Download mitgebracht werden)
 <br>
@@ -30,7 +29,7 @@ const url = "mongodb://mongo:27017";
 <br>
 Diese Version des Abschlussprojekts ist durch Dockerhub gegeben.
 <br>
-
+<br>
 Außerdem ist es möglich das Projekt als pure Node Anwendung ohne Docker zu starten 
 <br>
 Klonen Sie das Repository und speichern es Lokal.<br>
