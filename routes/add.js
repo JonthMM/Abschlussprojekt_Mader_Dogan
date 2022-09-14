@@ -114,24 +114,8 @@ router.post("/textarea", function (req, res, next) {
  }
 
 /**
- * Überprüft ob ein Javascript String eine gültige URL ist 
- * https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
- * @param {*} string zu überprüfende URL
- */
- function isValidHttpUrl(string) {
-  let url;
-
-  try {
-    url = new URL(string);
-  } catch (_) {
-    return false;
-  }
-
-  return url.protocol === "http:" || url.protocol === "https:";
-}
-
-/**
- * Checkt ob eine URL eine gültige URL ist und ob es sich um eine Wikipedia URL handelt
+ * @function getWikipediaDescription
+ * @desc Checkt ob eine URL eine gültige URL ist und ob es sich um eine Wikipedia URL handelt
  * @param {*} url 
  */
 function getWikipediaDescription(url) {
@@ -157,7 +141,8 @@ function getWikipediaDescription(url) {
 
 
 /**
- * Überprüft ob ein Javascript String eine gültige URL ist 
+ * @function isValidHttpUrl
+ * @desc Überprüft ob ein Javascript String eine gültige URL ist 
  * https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
  * @param {*} string als zu überprüfende URL
  */
