@@ -1,7 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
+/**
+ * GET Befehl für das Impressum
+ */
 router.get("/", function (req, res, next) {
   res.render("impressum", { title: "Impressum" });
 });
