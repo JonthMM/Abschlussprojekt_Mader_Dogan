@@ -3,7 +3,8 @@
 
 Dies ist unser repository für die Abschlussaufgabe des Kurses Geosoftware 1 im Sommersemester 22!
 
-Dockerhub: https://hub.docker.com/repository/docker/jonthnm/aufgabe7
+Dockerhub: https://hub.docker.com/repository/docker/jonthnm/aufgabe7 <br>
+
 Hier funktioniert die Kommunikation mit der mongodb leider nicht, da der Server abstürzt sobald ein POST Befehl stattfindet.
 
 <h2>Tutorial</h2>
