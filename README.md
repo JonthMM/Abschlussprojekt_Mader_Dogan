@@ -22,6 +22,7 @@ http://localhost:3000/
 Außerdem ist es möglich das Projekt als pure Node Anwendung ohne Docker zu starten (dann funktioniert auch die Kommunikation zur Datenbank).<br>
 Klonen Sie das Repository und speichern es Lokal.<br>
 Öffnen Sie es dann in ihrer IDE und öffnen das Terminal. Dort geben Sie folgenden Befehl ein:
+<br>
 $ npm install <br>
 und dann <br>
 $ npm start <br>
