@@ -5,12 +5,9 @@ Dies ist unser repository für die Abschlussaufgabe des Kurses Geosoftware 1 im 
 
 Dockerhub: https://hub.docker.com/repository/docker/jonthnm/projektaufgabe_mader_dogan	 <br>
 
-Hier funktioniert die Kommunikation mit der mongodb leider nicht, da der Server abstürzt sobald ein POST Befehl stattfindet.
-
 <h2>Tutorial</h2>
 <br>
-Um die Anwendung mit Docker zu starten klonen Sie das Repository und speichern es Lokal.
-Öffnen Sie es dann in ihrer IDE und öffnen das Terminal. Dort geben Sie folgenden Befehl ein:
+Um die Anwendung mit Docker zu starten ziehen Sie sich das Image von Docker hub und lassen es laufen mit dem mongo und dem mongo-express Container
 <br>
 $ docker-compose up
 <br>
@@ -19,10 +16,25 @@ $ docker-compose up
 Die Website ist dann Erreichbar unter:<br>
 http://localhost:3000/
 <br>
+Leider ist es nicht möglich, dass repository zu klonen und dann mit 
 <br>
-Außerdem ist es möglich das Projekt als pure Node Anwendung ohne Docker zu starten (dann funktioniert auch die Kommunikation zur Datenbank).<br>
+$ docker-compose up
+<br>
+zu starten, da dann die npm install und npm start version nicht mehr gehen würde, da hier für die 
+<br> 
+const url = "mongodb://127.0.0.1:27017";
+<br>
+in den routes benötigt wird, für docker allerdings
+<br>
+const url = "mongodb://mongo:27017";
+<br>
+Diese Version des Abschlussprojekts ist durch Dockerhub gegeben.
+<br>
+
+Außerdem ist es möglich das Projekt als pure Node Anwendung ohne Docker zu starten 
+<br>
 Klonen Sie das Repository und speichern es Lokal.<br>
-Öffnen Sie es dann in ihrer IDE und öffnen das Terminal. Dort geben Sie folgenden Befehl ein:
+Öffnen Sie den Ordner dann in ihrer IDE und öffnen das Terminal. Dort geben Sie folgenden Befehl ein:
 <br>
 $ npm install <br>
 und dann <br>
